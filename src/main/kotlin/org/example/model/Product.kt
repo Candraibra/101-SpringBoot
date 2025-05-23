@@ -10,7 +10,7 @@ data class Product(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     val id: Long = 0,
-    val name: String,
-    val description: String,
-    val price: Double
+    val name: String = "",
+    val description: String = "",
+    val price: Double = 0.0
 )
