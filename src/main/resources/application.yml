@@ -1,0 +1,30 @@
+# PostgreSQL Database Configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/productdb
+    username: candra.sanie
+    password:
+  
+  # JPA/Hibernate
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  
+  # SQL Initialization
+  sql:
+    init:
+      mode: always
+      platform: postgresql
+
+# Server port
+server:
+  port: 8080
+
+# JWT Configuration
+jwt:
+  secret: myVerySecretJWTKeyThatIsAtLeast256BitsLongForSecurity2024
+  expiration: 86400000
